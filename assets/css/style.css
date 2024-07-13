@@ -1,0 +1,209 @@
+/* Universal Styles */
+
+:root {
+  --font-size: 20px;
+
+  --main-font: "Urbanist";
+  --logo-font: "Square Peg";
+  --quote-font: "Inria Serif";
+
+  --text-color-dark: hsl(0, 0%, 25%);
+  --text-color-light: hsl(0, 0%, 100%);
+
+  --bg-one: hsl(0, 0%, 100%);
+  --bg-two: hsl(0, 0%, 85%);
+  --accent: hsl(230, 50%, 40%);
+
+  --scaling-factor: 2;
+  --min-factor: 0.65;
+}
+
+html {
+  background-color: var(--bg-one);
+  color: var(--text-color-dark);
+  font-family: var(--main-font), Helvetica, sans-serif;
+  font-size: var(--font-size);
+  letter-spacing: 3%;
+}
+
+/* Selector Styles */
+
+h1 {
+  font-weight: normal;
+  --max-font-size: 3em;
+  --min-font-size: calc(var(--min-factor) * var(--max-font-size));
+  font-size: clamp(
+    var(--min-font-size),
+    calc(3vw * var(--scaling-factor)),
+    var(--max-font-size)
+  );
+}
+
+q {
+  font-family: var(--quote-font);
+  font-style: italic;
+  font-weight: lighter;
+  letter-spacing: normal;
+  --max-font-size: 1em;
+  --min-font-size: calc(var(--min-factor) * var(--max-font-size));
+  font-size: clamp(
+    var(--min-font-size),
+    calc(1vw * var(--scaling-factor)),
+    var(--max-font-size)
+  );
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.spacer {
+  width: 100%;
+  border-bottom: thin solid var(--text-color-light);
+}
+
+/* Nav */
+
+nav {
+  width: 100%;
+  min-width: 400px;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  padding: 2.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+#logo {
+  color: var(--text-color-light);
+  font-family: var(--logo-font);
+  font-size: 2.5rem;
+  letter-spacing: normal;
+}
+
+#logo:hover {
+  text-decoration: none;
+}
+
+.nav-links-container {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link a {
+  color: var(--text-color-light);
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.nav-link i {
+  color: var(--text-color-light);
+  display: none;
+}
+
+/* Header */
+
+header {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.66) 0%,
+      rgba(0, 0, 0, 0.66) 100%
+    ),
+    url("../images/yosemite-tunnel-view.jpg") lightgray 50% / cover no-repeat;
+  color: var(--text-color-light);
+  min-width: 300px;
+  height: 95vh;
+  min-height: 600px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  width: auto;
+  max-width: 35em;
+  text-align: center;
+  border: 2px solid var(--text-color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25em;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  --max-padding: 2.75em;
+  --min-padding: calc(var(--min-factor) * var(--max-padding));
+  padding: clamp(
+    var(--min-padding),
+    calc(2.75vw * var(--scaling-factor)),
+    var(--max-padding)
+  );
+}
+
+.hero p {
+  font-family: var(--quote-font);
+  font-weight: 200;
+  --max-font-size: 1em;
+  --min-font-size: calc(var(--min-factor) * var(--max-font-size));
+  font-size: clamp(
+    var(--min-font-size),
+    calc(1vw * var(--scaling-factor)),
+    var(--max-font-size)
+  );
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-self: stretch;
+}
+
+.fa-chevron-down {
+  color: var(--text-color-light);
+  position: relative;
+  top: 3em;
+  font-size: 2em;
+  justify-self: flex-end;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+  #logo,
+  .nav-link span {
+    display: none;
+  }
+
+  nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nav-links-container {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .nav-link i {
+    display: inline;
+    --max-font-size: 1.5rem;
+    --min-font-size: calc(var(--min-factor) * var(--max-font-size));
+    font-size: clamp(
+      var(--min-font-size),
+      calc(1.5vw * 4),
+      var(--max-font-size)
+    );
+  }
+
+  .nav-link a:hover {
+    text-decoration: none;
+  }
+}
