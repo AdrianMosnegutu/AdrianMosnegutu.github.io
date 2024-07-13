@@ -6,6 +6,423 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Square+Peg&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9dc20adf60.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <span>Adrian Moșneguțu</span>
+      <ul class="nav-links-container">
+        <li class="nav-link">
+          <a href="#about">About</a>
+        </li>
+        <li class="nav-link">
+          <a href="#education">Education</a>
+        </li>
+        <li class="nav-link">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="nav-link">
+          <a href="#skills">Skills</a>
+        </li>
+        <li class="nav-link">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <div class="hero">
+        <h1>Hi, there! I am Adrian</h1>
+        <div class="spacer"></div>
+        <q>
+          When something is important enough, you do it even if the odds are not
+          in your favor.
+        </q>
+        <p>- Elon Musk</p>
+      </div>
+      <i class="fa-solid fa-chevron-down"></i>
+    </header>
+    <main>
+      <section id="about">
+        <div class="section-header">
+          <div class="spacer"></div>
+          <h2>About Me</h2>
+          <div class="spacer"></div>
+        </div>
+        <img src="assets/images/photo-of-me.jpeg" alt="photo of me" />
+        <article>
+          <p>
+            My name is <strong>Adrian Moșneguțu</strong>, and I am a second-year
+            computer science student at
+            <strong>Babeș-Bolyai University</strong> in Cluj-Napoca, Romania.
+            From a young age, I've been passionate about technology. Over the
+            years, I've sharpened my programming skills through my academic
+            studies and by participating in numerous programming competitions
+            and olympiads.
+          </p>
+          <p>Outside coding, I enjoy <strong>hobbies</strong> such as:</p>
+          <ul class="hobbies-container">
+            <li class="hobby">
+              <div class="hobby-icon">
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+              <p>reading</p>
+            </li>
+            <li class="hobby">
+              <div class="hobby-icon">
+                <i class="fa-solid fa-futbol"></i>
+              </div>
+              <p>playing sports</p>
+            </li>
+            <li class="hobby">
+              <div class="hobby-icon">
+                <i class="fa-solid fa-person-hiking"></i>
+              </div>
+              <p>hiking</p>
+            </li>
+            <li class="hobby">
+              <div class="hobby-icon">
+                <i class="fa-solid fa-passport"></i>
+              </div>
+              <p>traveling</p>
+            </li>
+          </ul>
+        </article>
+        <button id="download-cv">
+          <i class="fa-solid fa-download"></i>
+          <span>Download CV</span>
+        </button>
+      </section>
+      <section id="education">
+        <div class="section-header">
+          <div class="spacer"></div>
+          <h2>Education</h2>
+          <div class="spacer"></div>
+        </div>
+        <ul class="schools-container">
+          <li class="school">
+            <img src="assets/icons/cni-logo.png" alt="CNI logo" />
+            <div class="school-header">
+              <h3>High-School Diploma</h3>
+              <h4>Colegiul Național de Informatică</h4>
+            </div>
+            <div class="school-details">
+              <p>Graduation: June 2023</p>
+              <p>Average GPA: 3.80 / 4</p>
+            </div>
+          </li>
+          <li class="school">
+            <img src="assets/icons/ubb-logo.jpg" alt="UBB logo" />
+            <div class="school-header">
+              <h3>Bachelor in Computer Science</h3>
+              <h4>Babeș-Bolyai University</h4>
+            </div>
+            <div class="school-details">
+              <p>Graduation: July 2026</p>
+              <p>Average GPA: 3.48 / 4</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="projects">
+        <div class="section-header">
+          <div class="spacer"></div>
+          <h2>Projects</h2>
+          <div class="spacer"></div>
+        </div>
+        <ul class="projects-container">
+          <li class="project" id="chess">
+            <article>
+              <h3>Chess</h3>
+              <div class="project-tools">
+                <h4>Made using:</h4>
+                <img src="assets/icons/unity.png" alt="unity" />
+                <img src="assets/icons/c-sharp.png" alt="C#" />
+              </div>
+              <p>
+                For my final exams in high school, I developed this simple chess
+                game that includes essential mechanics like piece movement,
+                legal moves, en passant, castling, check, and checkmate.
+              </p>
+              <p>
+                This project was instrumental in enhancing my problem-solving
+                abilities and deepening my understanding of data structures and
+                algorithms.
+              </p>
+              <p>
+                It also solidified my grasp of key object-oriented programming
+                concepts such as inheritance and polymorphism.
+              </p>
+              <a href="">Show more...</a>
+            </article>
+            <div class="project-thumbnail">
+              <img
+                src="assets/images/chess-thumbnail.png"
+                alt="chess thumbnail"
+              />
+              <a href="https://adrian-mosnegutu.itch.io/chess" target="_blank">
+                <i class="fa-solid fa-play"></i>
+                <span>Play</span>
+              </a>
+            </div>
+          </li>
+          <li class="project" id="rolly">
+            <article>
+              <h3>Rolly</h3>
+              <div class="project-tools">
+                <h4>Made using:</h4>
+                <img src="assets/icons/unity.png" alt="unity" />
+                <img src="assets/icons/c-sharp.png" alt="C#" />
+              </div>
+              <p>
+                I designed and submitted this retro arcade game reminiscent of
+                the 1980s for a Nokia-themed game jam.
+              </p>
+              <p>
+                The objective is straightforward: land on platforms while
+                dodging spikes to achieve a high score.
+              </p>
+              <p>
+                Although more of a fun exercise, this project significantly
+                improved my time management skills and fostered creative
+                thinking.
+              </p>
+              <a href="">Show more...</a>
+            </article>
+            <div class="project-thumbnail">
+              <img
+                src="assets/images/rolly-thumbnail.png"
+                alt="rolly thumbnail"
+              />
+              <a href="https://adrian-mosnegutu.itch.io/rolly" target="_blank">
+                <i class="fa-solid fa-play"></i>
+                <span>Play</span>
+              </a>
+            </div>
+          </li>
+          <li class="project" id="minesweeper">
+            <article>
+              <h3>Minesweeper</h3>
+              <div class="project-tools">
+                <h4>Made using:</h4>
+                <img src="assets/icons/unity.png" alt="unity" />
+                <img src="assets/icons/c-sharp.png" alt="C#" />
+              </div>
+              <p>
+                During the 2020 pandemic, I developed a Minesweeper clone, one
+                of the first games I created in Unity.
+              </p>
+              <p>
+                The premise is simple: click on all the empty squares on the
+                board without hitting any mines. The numbers on the squares
+                indicate the number of neighboring mines.
+              </p>
+              <p>
+                This starter project helped me understand the functionalities of
+                the Unity game engine and introduced me to various algorithms,
+                such as Lee's algorithm.
+              </p>
+              <a href="">Show more...</a>
+            </article>
+            <div class="project-thumbnail">
+              <img
+                src="assets/images/minesweeper-thumbnail.webp"
+                alt="minesweeper thumbnail"
+              />
+              <a
+                href="https://gamejolt.com/games/minesweeper/564868"
+                target="_blank"
+              >
+                <i class="fa-solid fa-play"></i>
+                <span>Play</span>
+              </a>
+            </div>
+          </li>
+          <li class="project" id="tic-tac-toe">
+            <article>
+              <h3>Tic-Tac-Toe</h3>
+              <div class="project-tools">
+                <h4>Made using:</h4>
+                <img src="assets/icons/unity.png" alt="unity" />
+                <img src="assets/icons/c-sharp.png" alt="C#" />
+              </div>
+              <p>
+                A digital rendition of the popular game Tic-Tac-Toe, this was my
+                first personal project.
+              </p>
+              <p>
+                Initially programmed in Java and later remastered in Unity, it
+                features two modes: player versus player and player versus
+                computer, the latter utilizing the minmax algorithm.
+              </p>
+              <p>
+                This project served as my gateway into game development and
+                other complex areas of computer science, sparking my passion for
+                coding.
+              </p>
+              <a href="">Show more...</a>
+            </article>
+            <div class="project-thumbnail">
+              <img
+                src="assets/images/tic-tac-toe-thumbnail.webp"
+                alt="tic-tac-toe thumbnail"
+              />
+              <a
+                href="https://gamejolt.com/games/TicTacToe/483689"
+                target="_blank"
+              >
+                <i class="fa-solid fa-play"></i>
+                <span>Play</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="skills">
+        <div class="section-header">
+          <div class="spacer"></div>
+          <h2>Skills</h2>
+          <div class="spacer"></div>
+        </div>
+        <ul class="skills-container">
+          <li class="skill" id="html">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/html.png" alt="html logo" />
+            <p>100%</p>
+          </li>
+          <li class="skill" id="css">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/css.png" alt="css logo" />
+            <p>100%</p>
+          </li>
+          <li class="skill" id="python">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/python.png" alt="python logo" />
+            <p>100%</p>
+          </li>
+          <li class="skill" id="c">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/c.png" alt="C logo" />
+            <p>100%</p>
+          </li>
+          <li class="skill" id="cpp">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/cpp.png" alt="C++ logo" />
+            <p>80%</p>
+          </li>
+          <li class="skill" id="assembly">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/assembly.png" alt="assembly logo" />
+            <p>75%</p>
+          </li>
+          <li class="skill" id="javascript">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/javascript.png" alt="javascript logo" />
+            <p>50%</p>
+          </li>
+          <li class="skill" id="unity">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/unity.png" alt="unity logo" />
+            <p>50%</p>
+          </li>
+          <li class="skill" id="c-sharp">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/c-sharp.png" alt="C# logo" />
+            <p>40%</p>
+          </li>
+          <li class="skill" id="java">
+            <svg class="filled-arc"></svg>
+            <svg class="empty-arc"></svg>
+            <img src="assets/icons/java.png" alt="ava logo" />
+            <p>20%</p>
+          </li>
+        </ul>
+      </section>
+      <section id="contact">
+        <div class="section-header">
+          <div class="spacer"></div>
+          <h2>Contact</h2>
+          <div class="spacer"></div>
+        </div>
+        <ul class="contacts-container">
+          <li class="contact">
+            <a
+              href="https://www.google.com/maps/place/Cluj-Napoca/@46.7833561,23.5341127,12z/data=!3m1!4b1!4m6!3m5!1s0x47490c1f916c0b8b:0xbbc601c331f148b!8m2!3d46.7712101!4d23.6236353!16zL20vMHAyZ3E?entry=ttu"
+              target="_blank"
+            >
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <address>Cluj-Napoca, Romania</address>
+            </a>
+          </li>
+          <li class="contact">
+            <a href="mailto:adrianmosnegutuioan@yahoo.com">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <address>adrianmosnegutuioan@yahoo.com</address>
+            </a>
+          </li>
+          <li class="contact">
+            <a href="tel:+40747381391">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <address>+40 747 381 391</address>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul class="social-media-container">
+        <li class="social-media">
+          <a
+            href="https://www.facebook.com/adrian.mosnegutu.7739"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="social-media">
+          <a href="https://www.instagram.com/adrian_mosnegutu/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li class="social-media">
+          <a
+            href="https://www.linkedin.com/in/adrian-mosnegutu/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li class="social-media">
+          <a href="https://github.com/AdrianMosnegutu" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      </ul>
+      <h5>&copy; Adrian Mosnegutu 2024</h5>
+    </footer>
+  </body>
 </html>
