@@ -63,10 +63,19 @@ q {
 a {
   text-decoration: none;
   color: var(--accent);
+  transition: all 150ms ease;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+a:active {
+  opacity: 66%;
+}
+
+img {
+  object-fit: cover;
 }
 
 .spacer {
@@ -324,6 +333,80 @@ section .spacer {
 
 .school h4 {
   color: var(--accent);
+}
+
+/* Projects */
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.project {
+  background: hsl(0, 0%, 95%);
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  gap: 2.5em;
+}
+
+.project article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.project h3 {
+  font-size: 1.8rem;
+}
+
+.project h4 {
+  font-size: 1.25rem;
+  opacity: 75%;
+  font-weight: normal;
+}
+
+.project-tools {
+  display: flex;
+  gap: 0.5em;
+}
+
+.project-tools img {
+  width: 1.5em;
+  aspect-ratio: 1;
+}
+
+.project-thumbnail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.project-thumbnail img {
+  border-radius: 10px;
+  height: 225px;
+  aspect-ratio: 4 / 3;
+}
+
+.project-thumbnail a {
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  margin-right: auto;
+  color: var(--accent);
+  border-radius: 200px;
+  align-items: center;
+  text-decoration: none;
+  border: 2px solid var(--accent);
+  transition: all 150ms ease;
+}
+
+.project-thumbnail a:hover {
+  background-color: var(--accent);
+  color: var(--text-color-light);
 }
 
 /* Media Queries */
