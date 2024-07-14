@@ -46,6 +46,12 @@ h2 {
   text-align: center;
 }
 
+h5 {
+  color: var(--text-color-light);
+  margin: auto;
+  font-weight: normal;
+}
+
 q {
   font-family: var(--quote-font);
   font-style: italic;
@@ -76,6 +82,10 @@ a:active {
 
 img {
   object-fit: cover;
+}
+
+address {
+  font-style: normal;
 }
 
 .spacer {
@@ -407,6 +417,139 @@ section .spacer {
 .project-thumbnail a:hover {
   background-color: var(--accent);
   color: var(--text-color-light);
+}
+
+/* Skills */
+
+.skills-container {
+  display: flex;
+  flex-flow: wrap row;
+  gap: 1.5em 3em;
+  max-width: 900px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.skill {
+  width: 125px;
+  height: 125px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.skill img {
+  width: 3em;
+  aspect-ratio: 1;
+}
+
+.skill svg {
+  width: 125px;
+}
+
+/* Contact */
+
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25em;
+}
+
+.contact a {
+  display: flex;
+  gap: 0.5em;
+  text-decoration: none;
+  border: 2px solid var(--accent);
+  padding: 5px 20px 5px 5px;
+  border-radius: 200px;
+  font-size: 1.2rem;
+  align-items: center;
+  transition: all 150ms ease;
+}
+
+.contact a:hover {
+  background-color: var(--accent);
+  color: var(--text-color-light);
+}
+
+.contact-icon {
+  display: flex;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: var(--text-color-light);
+  width: 2rem;
+  aspect-ratio: 1;
+  transition: all 150ms ease;
+}
+
+.contact:hover .contact-icon {
+  background-color: white;
+  color: var(--accent);
+}
+
+.contact-icon i {
+  margin: auto;
+  font-size: 0.8em;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1.5em 0;
+  background-color: #333;
+}
+
+.social-media-container {
+  display: flex;
+  margin: auto;
+}
+
+.social-media a {
+  width: 3rem;
+  aspect-ratio: 1;
+  background: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #333;
+  color: var(--text-color-light);
+  font-size: 30px;
+  transition: none;
+}
+
+.social-media a:hover {
+  text-decoration: none;
+}
+
+#facebook:hover {
+  background: #4267b2;
+}
+
+#instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+#linkedin:hover {
+  background: #0077b5;
+}
+
+#github:hover {
+  background: #000;
 }
 
 /* Media Queries */
