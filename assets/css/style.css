@@ -39,6 +39,13 @@ h1 {
   );
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+}
+
 q {
   font-family: var(--quote-font);
   font-style: italic;
@@ -55,6 +62,7 @@ q {
 
 a {
   text-decoration: none;
+  color: var(--accent);
 }
 
 a:hover {
@@ -129,7 +137,6 @@ header {
 }
 
 .hero {
-  width: auto;
   max-width: 35em;
   text-align: center;
   border: 2px solid var(--text-color-light);
@@ -172,6 +179,151 @@ header {
   top: 3em;
   font-size: 2em;
   justify-self: flex-end;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5em;
+  padding: 100px 3rem;
+}
+
+section:nth-child(even) {
+  background-color: var(--bg-two);
+}
+
+section .spacer {
+  border-color: var(--text-color-dark);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: 1em;
+  justify-content: center;
+  max-width: 900px;
+  min-width: 300px;
+  width: 100%;
+}
+
+/* About */
+
+#about {
+  text-align: center;
+}
+
+#about img {
+  width: 175px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: auto;
+}
+
+#about article {
+  display: flex;
+  flex-direction: column;
+  max-width: 60ch;
+  gap: 30px;
+}
+
+.hobbies-container {
+  display: flex;
+  gap: 75px;
+  margin: auto;
+}
+
+.hobby {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.hobby-icon {
+  background: var(--accent);
+  color: var(--text-color-light);
+  width: 4em;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.hobby-icon i {
+  font-size: 1.5em;
+}
+
+#download-cv {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.75rem 1.5rem;
+  gap: 1rem;
+  border-radius: 200px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+#download-cv:hover {
+  background-color: var(--accent);
+  color: var(--text-color-light);
+}
+
+#download-cv:active {
+  opacity: 66%;
+}
+
+#download-cv span {
+  font-size: 1.2rem;
+}
+
+#download-cv i {
+  font-size: 1.2rem;
+}
+
+/* Education */
+
+.schools-container {
+  display: flex;
+  flex-flow: wrap-reverse row;
+  gap: 1rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.school {
+  display: flex;
+  padding: 40px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+.school img {
+  width: 10rem;
+  justify-self: center;
+  margin: auto;
+}
+
+.school h4 {
+  color: var(--accent);
 }
 
 /* Media Queries */
