@@ -17,40 +17,44 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <script src="assets/js/nav-bar.js" async></script>
+    <script src="assets/js/download-cv.js" async></script>
+    <script src="assets/js/project-info.js" async></script>
+    <script src="assets/js/arc-generator.js" async></script>
   </head>
   <body>
     <nav>
-      <a id="logo" href="#">Adrian Moșneguțu</a>
+      <button id="logo">Adrian Moșneguțu</button>
       <ul class="nav-links-container">
         <li class="nav-link">
-          <a href="#about">
+          <button>
             <span>About</span>
             <i class="fa-solid fa-user"></i>
-          </a>
+          </button>
         </li>
         <li class="nav-link">
-          <a href="#education">
+          <button>
             <span>Education</span>
             <i class="fa-solid fa-graduation-cap"></i>
-          </a>
+          </button>
         </li>
         <li class="nav-link">
-          <a href="#projects">
+          <button>
             <span>Projects</span>
             <i class="fa-solid fa-cubes"></i>
-          </a>
+          </button>
         </li>
         <li class="nav-link">
-          <a href="#skills">
+          <button>
             <span>Skills</span>
             <i class="fa-solid fa-code"></i>
-          </a>
+          </button>
         </li>
         <li class="nav-link">
-          <a href="#contact">
+          <button>
             <span>Contact</span>
             <i class="fa-solid fa-at"></i>
-          </a>
+          </button>
         </li>
       </ul>
     </nav>
@@ -187,7 +191,7 @@
                 It also solidified my grasp of key object-oriented programming
                 concepts such as inheritance and polymorphism.
               </p>
-              <a href="">Show more...</a>
+              <button>Show more...</button>
             </article>
             <div class="project-thumbnail">
               <img
@@ -221,7 +225,7 @@
                 improved my time management skills and fostered creative
                 thinking.
               </p>
-              <a href="">Show more...</a>
+              <button>Show more...</button>
             </article>
             <div class="project-thumbnail">
               <img
@@ -256,7 +260,7 @@
                 the Unity game engine and introduced me to various algorithms,
                 such as Lee's algorithm.
               </p>
-              <a href="">Show more...</a>
+              <button>Show more...</button>
             </article>
             <div class="project-thumbnail">
               <img
@@ -294,7 +298,7 @@
                 other complex areas of computer science, sparking my passion for
                 coding.
               </p>
-              <a href="">Show more...</a>
+              <button>Show more...</button>
             </article>
             <div class="project-thumbnail">
               <img
@@ -320,64 +324,84 @@
         </div>
         <ul class="skills-container">
           <li class="skill" id="html">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/html.png" alt="html logo" />
-            <p>100%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/html.png" alt="html logo" />
+              <p>100%</p>
+            </div>
           </li>
           <li class="skill" id="css">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/css.png" alt="css logo" />
-            <p>100%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/css.png" alt="css logo" />
+              <p>100%</p>
+            </div>
           </li>
           <li class="skill" id="python">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/python.png" alt="python logo" />
-            <p>100%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/python.png" alt="python logo" />
+              <p>100%</p>
+            </div>
           </li>
           <li class="skill" id="c">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/c.png" alt="C logo" />
-            <p>100%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/c.png" alt="C logo" />
+              <p>100%</p>
+            </div>
           </li>
           <li class="skill" id="cpp">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/cpp.png" alt="C++ logo" />
-            <p>80%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/cpp.png" alt="C++ logo" />
+              <p>80%</p>
+            </div>
           </li>
           <li class="skill" id="assembly">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/assembly.png" alt="assembly logo" />
-            <p>75%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/assembly.png" alt="assembly logo" />
+              <p>75%</p>
+            </div>
           </li>
           <li class="skill" id="javascript">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/javascript.png" alt="javascript logo" />
-            <p>50%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/javascript.png" alt="javascript logo" />
+              <p>50%</p>
+            </div>
           </li>
           <li class="skill" id="unity">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/unity.png" alt="unity logo" />
-            <p>50%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/unity.png" alt="unity logo" />
+              <p>50%</p>
+            </div>
           </li>
           <li class="skill" id="c-sharp">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/c-sharp.png" alt="C# logo" />
-            <p>40%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/c-sharp.png" alt="C# logo" />
+              <p>40%</p>
+            </div>
           </li>
           <li class="skill" id="java">
-            <svg class="filled-arc"></svg>
             <svg class="empty-arc"></svg>
-            <img src="assets/icons/java.png" alt="ava logo" />
-            <p>20%</p>
+            <svg class="filled-arc"></svg>
+            <div class="skill-details">
+              <img src="assets/icons/java.png" alt="ava logo" />
+              <p>20%</p>
+            </div>
           </li>
         </ul>
       </section>

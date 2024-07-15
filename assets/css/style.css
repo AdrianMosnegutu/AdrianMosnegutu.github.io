@@ -88,6 +88,10 @@ address {
   font-style: normal;
 }
 
+button {
+  cursor: pointer;
+}
+
 .spacer {
   width: 100%;
   border-bottom: thin solid var(--text-color-light);
@@ -106,6 +110,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 999;
+  transition: all 300ms ease-in-out;
 }
 
 #logo {
@@ -113,6 +118,7 @@ nav {
   font-family: var(--logo-font);
   font-size: 2.5rem;
   letter-spacing: normal;
+  transition: all 150ms ease;
 }
 
 #logo:hover {
@@ -124,10 +130,19 @@ nav {
   gap: 30px;
 }
 
-.nav-link a {
+.nav-link button {
   color: var(--text-color-light);
   font-size: 1.2rem;
-  font-weight: lighter;
+  font-weight: 300;
+  transition: all 150ms ease;
+}
+
+.nav-link button:hover {
+  text-decoration: underline;
+}
+
+.nav-link button:active {
+  opacity: 66%;
 }
 
 .nav-link i {
@@ -146,7 +161,7 @@ header {
     url("../images/yosemite-tunnel-view.jpg") lightgray 50% / cover no-repeat;
   color: var(--text-color-light);
   min-width: 300px;
-  height: 95vh;
+  height: 100vh;
   min-height: 600px;
   padding: 2em;
   display: flex;
@@ -198,6 +213,7 @@ header {
   top: 3em;
   font-size: 2em;
   justify-self: flex-end;
+  animation: arrow-animation 1.5s ease-in-out infinite;
 }
 
 /* Main */
@@ -292,7 +308,6 @@ section .spacer {
   padding: 0.75rem 1.5rem;
   gap: 1rem;
   border-radius: 200px;
-  cursor: pointer;
   transition: all 150ms ease;
 }
 
@@ -379,6 +394,22 @@ section .spacer {
   font-weight: normal;
 }
 
+.project button {
+  color: var(--accent);
+  font-size: 1rem;
+  padding: 0;
+  text-align: start;
+  transition: all 150ms ease;
+}
+
+.project button:hover {
+  text-decoration: underline;
+}
+
+.project button:active {
+  opacity: 66%;
+}
+
 .project-tools {
   display: flex;
   gap: 0.5em;
@@ -434,11 +465,10 @@ section .spacer {
 .skill {
   width: 125px;
   height: 125px;
+  display: grid;
   text-align: center;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   gap: 5px;
 }
 
@@ -449,6 +479,23 @@ section .spacer {
 
 .skill svg {
   width: 125px;
+  height: 100%;
+  position: relative;
+  top: 0;
+}
+
+.skill-details {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill svg,
+.skill-details {
+  grid-area: 1 / 1 / 1 / 1;
 }
 
 /* Contact */
@@ -513,7 +560,7 @@ footer {
 }
 
 .social-media a {
-  width: 3rem;
+  width: 2.8rem;
   aspect-ratio: 1;
   background: #666;
   display: flex;
@@ -552,6 +599,18 @@ footer {
   background: #000;
 }
 
+/* Animations */
+
+@keyframes arrow-animation {
+  50% {
+    top: calc(3em + 20px);
+  }
+
+  100% {
+    top: 3em;
+  }
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 900px) {
@@ -581,7 +640,7 @@ footer {
     );
   }
 
-  .nav-link a:hover {
+  .nav-link button:hover {
     text-decoration: none;
   }
 }
