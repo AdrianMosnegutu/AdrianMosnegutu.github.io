@@ -8,7 +8,7 @@ const fontColor = getComputedStyle(document.documentElement)
   .trim();
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY <= 0) {
+  if (window.scrollY <= window.innerHeight - 100) {
     navBar.style.background = "transparent";
     navBar.style.color = "white";
     navBar.style.boxShadow = "none";
@@ -30,16 +30,13 @@ window.addEventListener("scroll", () => {
 
 function scrollToSection(event) {
   if (event.target.id === "logo")
-    document
-      .getElementsByTagName("header")[0]
-      .scrollIntoView({ behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   else {
     document
-      .getElementById(event.target.innerHTML.toLowerCase())
+      .getElementById(event.target.id.split("-")[0])
       .scrollIntoView({ behavior: "smooth" });
   }
 }
 
-for (let button of navBar.getElementsByTagName("button")) {
+for (let button of navBar.getElementsByTagName("button"))
   button.onclick = scrollToSection;
-}

@@ -2,20 +2,16 @@
 
 :root {
   --font-size: 20px;
-
   --main-font: "Urbanist";
   --logo-font: "Square Peg";
   --quote-font: "Inria Serif";
-
   --text-color-dark: hsl(0, 0%, 25%);
   --text-color-light: hsl(0, 0%, 100%);
-
   --bg-one: hsl(0, 0%, 100%);
   --bg-two: hsl(0, 0%, 85%);
   --accent: hsl(230, 50%, 40%);
-
   --scaling-factor: 2;
-  --min-factor: 0.65;
+  --min-factor: 0.7;
 }
 
 html {
@@ -40,16 +36,29 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
   font-weight: 400;
   width: 100%;
   text-align: center;
+  --max-font-size: 2em;
+  --min-font-size: calc(var(--min-factor) * var(--max-font-size));
+  font-size: clamp(
+    var(--min-font-size),
+    calc(2vw * var(--scaling-factor)),
+    var(--max-font-size)
+  );
 }
 
 h5 {
   color: var(--text-color-light);
   margin: auto;
   font-weight: normal;
+  --max-font-size: 1em;
+  --min-font-size: calc(var(--min-factor) * var(--max-font-size));
+  font-size: clamp(
+    var(--min-font-size),
+    calc(1vw * var(--scaling-factor)),
+    var(--max-font-size)
+  );
 }
 
 q {
@@ -92,6 +101,10 @@ button {
   cursor: pointer;
 }
 
+span {
+  font-family: var(--main-font), Helvetica, sans-serif;
+}
+
 .spacer {
   width: 100%;
   border-bottom: thin solid var(--text-color-light);
@@ -102,7 +115,7 @@ button {
 nav {
   width: 100%;
   min-width: 400px;
-  height: 75px;
+  height: 50px;
   position: fixed;
   top: 0;
   padding: 2.5em;
@@ -110,7 +123,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 999;
-  transition: all 300ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 #logo {
@@ -168,6 +181,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: -99;
 }
 
 .hero {
@@ -221,6 +237,7 @@ header {
 main {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 section {
@@ -228,8 +245,31 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2.5em;
-  padding: 100px 3rem;
+  --max-vertical-padding-size: 5em;
+  --min-vertical-padding-size: calc(
+    var(--min-factor) * var(--max-vertical-padding-size)
+  );
+  --max-horizontal-padding-size: 2em;
+  --min-horizontal-padding-size: calc(
+    var(--min-factor) * var(--max-horizontal-padding-size)
+  );
+  padding: clamp(
+      var(--min-vertical-padding-size),
+      calc(5vw * var(--scaling-factor)),
+      var(--max-vertical-padding-size)
+    )
+    clamp(
+      var(--min-horizontal-padding-size),
+      calc(2vw * var(--scaling-factor)),
+      var(--max-horizontal-padding-size)
+    );
+  --max-gap-size: 2.5em;
+  --min-gap-size: calc(var(--min-factor) * var(--max-gap-size));
+  gap: clamp(
+    var(--min-gap-size),
+    calc(2.5vw * var(--scaling-factor)),
+    var(--max-gap-size)
+  );
 }
 
 section:nth-child(even) {
@@ -247,7 +287,6 @@ section .spacer {
   gap: 1em;
   justify-content: center;
   max-width: 900px;
-  min-width: 300px;
   width: 100%;
 }
 
@@ -258,23 +297,44 @@ section .spacer {
 }
 
 #about img {
-  width: 175px;
   aspect-ratio: 1;
   border-radius: 50%;
   margin: auto;
+  --max-width-size: 8.75em;
+  --min-width-size: calc(var(--min-factor) * var(--max-width-size));
+  width: clamp(
+    var(--min-width-size),
+    calc(8.75vw * var(--scaling-factor)),
+    var(--max-width-size)
+  );
 }
 
 #about article {
   display: flex;
   flex-direction: column;
   max-width: 60ch;
-  gap: 30px;
+  --max-font-size: 1em;
+  --min-font-size: calc(var(--min-factor) * var(--max-font-size));
+  font-size: clamp(
+    var(--min-font-size),
+    calc(1vw * var(--scaling-factor)),
+    var(--max-font-size)
+  );
+  --max-gap-size: 1.5em;
+  --min-gap-size: calc(var(--min-factor) * var(--max-gap-size));
+  gap: clamp(
+    var(--min-gap-size),
+    calc(1.5vw * var(--scaling-factor)),
+    var(--max-gap-size)
+  );
 }
 
 .hobbies-container {
+  width: 100%;
   display: flex;
-  gap: 75px;
   margin: auto;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .hobby {
@@ -305,10 +365,33 @@ section .spacer {
   align-items: center;
   border: 2px solid var(--accent);
   color: var(--accent);
-  padding: 0.75rem 1.5rem;
-  gap: 1rem;
   border-radius: 200px;
   transition: all 150ms ease;
+  --max-vertical-padding-size: 0.75rem;
+  --min-vertical-padding-size: calc(
+    var(--min-factor) * var(--max-vertical-padding-size)
+  );
+  --max-horizontal-padding-size: 1.5rem;
+  --min-horizontal-padding-size: calc(
+    var(--min-factor) * var(--max-horizontal-padding-size)
+  );
+  padding: clamp(
+      var(--min-vertical-padding-size),
+      calc(0.75vw * var(--scaling-factor)),
+      var(--max-vertical-padding-size)
+    )
+    clamp(
+      var(--min-horizontal-padding-size),
+      calc(1.5vw * var(--scaling-factor)),
+      var(--max-horizontal-padding-size)
+    );
+  --max-gap-size: 1em;
+  --min-gap-size: calc(var(--min-factor) * var(--max-gap-size));
+  gap: clamp(
+    var(--min-gap-size),
+    calc(1vw * var(--scaling-factor)),
+    var(--max-gap-size)
+  );
 }
 
 #download-cv:hover {
@@ -321,11 +404,23 @@ section .spacer {
 }
 
 #download-cv span {
-  font-size: 1.2rem;
+  --max-font-size: 1.2rem;
+  --min-font-size: calc(var(--min-factor) * var(--max-font-size));
+  font-size: clamp(
+    var(--min-font-size),
+    calc(1.2vw * var(--scaling-factor)),
+    var(--max-font-size)
+  );
 }
 
 #download-cv i {
-  font-size: 1.2rem;
+  --max-font-size: 1.2rem;
+  --min-font-size: calc(var(--min-factor) * var(--max-font-size));
+  font-size: clamp(
+    var(--min-font-size),
+    calc(1.2vw * var(--scaling-factor)),
+    var(--max-font-size)
+  );
 }
 
 /* Education */
@@ -376,12 +471,15 @@ section .spacer {
   border-radius: 10px;
   display: flex;
   gap: 2.5em;
+  flex-wrap: wrap-reverse;
 }
 
 .project article {
   display: flex;
   flex-direction: column;
   gap: 0.75em;
+  max-width: 450px;
+  width: 100%;
 }
 
 .project h3 {
@@ -605,7 +703,6 @@ footer {
   50% {
     top: calc(3em + 20px);
   }
-
   100% {
     top: 3em;
   }

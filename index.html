@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Document</title>
+    <title>Adrian Mosnegutu | Portfolio</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/reset.css" />
@@ -17,10 +17,10 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="assets/js/nav-bar.js" async></script>
-    <script src="assets/js/download-cv.js" async></script>
-    <script src="assets/js/project-info.js" async></script>
-    <script src="assets/js/arc-generator.js" async></script>
+    <script src="assets/js/nav-bar.js" defer></script>
+    <script src="assets/js/download-cv.js" defer></script>
+    <script src="assets/js/project-info.js" defer></script>
+    <script src="assets/js/arc-generator.js" defer></script>
   </head>
   <body>
     <nav>
@@ -28,32 +28,32 @@
       <ul class="nav-links-container">
         <li class="nav-link">
           <button>
-            <span>About</span>
-            <i class="fa-solid fa-user"></i>
+            <span id="about-span">About</span>
+            <i class="fa-solid fa-user" id="about-i"></i>
           </button>
         </li>
         <li class="nav-link">
           <button>
-            <span>Education</span>
-            <i class="fa-solid fa-graduation-cap"></i>
+            <span id="education-span">Education</span>
+            <i class="fa-solid fa-graduation-cap" id="education-i"></i>
           </button>
         </li>
         <li class="nav-link">
           <button>
-            <span>Projects</span>
-            <i class="fa-solid fa-cubes"></i>
+            <span id="projects-span">Projects</span>
+            <i class="fa-solid fa-cubes" id="projects-i"></i>
           </button>
         </li>
         <li class="nav-link">
           <button>
-            <span>Skills</span>
-            <i class="fa-solid fa-code"></i>
+            <span id="skills-span">Skills</span>
+            <i class="fa-solid fa-code" id="skills-i"></i>
           </button>
         </li>
         <li class="nav-link">
           <button>
-            <span>Contact</span>
-            <i class="fa-solid fa-at"></i>
+            <span id="contact-span">Contact</span>
+            <i class="fa-solid fa-at" id="contact-i"></i>
           </button>
         </li>
       </ul>
@@ -102,7 +102,10 @@
               <div class="hobby-icon">
                 <i class="fa-solid fa-futbol"></i>
               </div>
-              <p>playing sports</p>
+              <p>
+                playing <br />
+                sports
+              </p>
             </li>
             <li class="hobby">
               <div class="hobby-icon">
