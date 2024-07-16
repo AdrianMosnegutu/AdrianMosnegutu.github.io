@@ -8,7 +8,10 @@ const fontColor = getComputedStyle(document.documentElement)
   .trim();
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY <= window.innerHeight - 100) {
+  if (
+    window.scrollY <=
+    window.innerHeight - (window.innerWidth <= 900 ? 70 : 100)
+  ) {
     navBar.style.background = "transparent";
     navBar.style.color = "white";
     navBar.style.boxShadow = "none";
